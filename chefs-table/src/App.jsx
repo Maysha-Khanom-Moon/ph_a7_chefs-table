@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className='px-36 pt-10 pb-24'>
+    <div className='px-20 lg:px-36 pt-10 pb-24'>
       <Header></Header>
       <OurRecipes recipes={recipes} handleWantToCook={handleWantToCook} wantToCook={wantToCook} currentlyCooking={currentlyCooking} handleCurrentlyCooking={handleCurrentlyCooking}></OurRecipes>
     </div>

@@ -10,10 +10,11 @@ function WantToCooks({wantToCook, handleCurrentlyCooking}) {
 
         <div>
           <div>
-            <div className='flex items-center gap-12 ml-20'>
-              <p>Name</p>
-              <p>Time</p>
-              <p>Calories</p>
+            <div className='flex items-center gap-12'>
+              <p className='w-1/12'></p>
+              <p className='w-1/6 lg:w-fit'>Name</p>
+              <p className='w-1/7 lg:w-fit'>Time</p>
+              <p className='w-1/6'>Calories</p>
               <p></p>
             </div>
 

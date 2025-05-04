@@ -5,7 +5,7 @@ import { AiOutlineFire } from "react-icons/ai";
 function Recipe({recipe, handleWantToCook}) {
   return (
     <div className='p-6 flex flex-col gap-4 justify-center items-center rounded-lg border-1 border-gray-200'> 
-      <img className="h-48 rounded-2xl w-full" src={recipe.image} alt="" />
+      <img className="h-72 lg:h-48 rounded-2xl w-full" src={recipe.image} alt="" />
 
       <div className="flex flex-col gap-4"> 
         <h2 className="text-xl">{recipe.recipe_name}</h2>
