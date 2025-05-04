@@ -2,9 +2,9 @@ import propTypes from "prop-types";
 import { CiStopwatch } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
 
-function Recipe({recipe}) {
+function Recipe({recipe, handleWantToCook}) {
   return (
-    <div className='our-recipes p-6 flex flex-col gap-4 justify-center items-center bg-white rounded-lg border-1 border-gray-200'> 
+    <div className='p-6 flex flex-col gap-4 justify-center items-center rounded-lg border-1 border-gray-200'> 
       <img className="h-48 rounded-2xl w-full" src={recipe.image} alt="" />
 
       <div className="flex flex-col gap-4"> 
@@ -35,7 +35,7 @@ function Recipe({recipe}) {
             </div>
         </div>
 
-        <button className="button w-fit">Want to Cook</button>
+        <button onClick={() => handleWantToCook(recipe)} className="button w-fit">Want to Cook</button>
       </div>
     </div>
   )
