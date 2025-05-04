@@ -45,3 +45,15 @@ nav li {
     font-size: 18px;
     font-weight: 400;
 }
+
+/* our recipes */
+.our-recipes h1 {
+    color: #150B2B;
+    font-size: 40px;
+    font-weight: 600;
+}
+.our-recipes p {
+    color: #150B2B99;
+    font-size: 16px;
+    font-weight: 400;
+}
