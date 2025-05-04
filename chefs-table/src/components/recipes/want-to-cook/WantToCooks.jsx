@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function WantToCooks({wantToCook}) {
+function WantToCooks({wantToCook, handleCurrentlyCooking}) {
   return (
     <div className='flex flex-col gap-4 mb-8'>
         <h2 className='text-center text-2xl font-bold'>Want to cook: {wantToCook.length}</h2>
@@ -25,7 +25,7 @@ function WantToCooks({wantToCook}) {
                     <p className='w-1/5 text-left'>{recipe.recipe_name}</p>
                     <p className='w-1/7 pl-2'>{parseInt(recipe.preparing_time)}</p>
                     <p className='w-1/6  text-center'>{parseInt(recipe.calories)}</p>
-                    <button className='px-4 py-2 h-fit bg-[#0BE58A] text-sm font-medium rounded-3xl'>Preparing</button>
+                    <button onClick={() => handleCurrentlyCooking(recipe)} className='px-4 py-2 h-fit bg-[#0BE58A] text-sm font-medium rounded-3xl'>Preparing</button>
                   </div>
                 ))
               }
@@ -37,7 +37,8 @@ function WantToCooks({wantToCook}) {
 }
 
 WantToCooks.propTypes = {
-    wantToCook: PropTypes.array.isRequired
+    wantToCook: PropTypes.array.isRequired,
+    handleCurrentlyCooking: PropTypes.func.isRequired
 }
 
 export default WantToCooks

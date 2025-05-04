@@ -1,8 +1,9 @@
 import propTypes from "prop-types";
 import Recipe from "./Recipe";
 import WantToCooks from "./want-to-cook/WantToCooks";
+import CurrentlyCookings from "./currently-cooking/CurrentlyCookings";
 
-function OurRecipes({recipes, handleWantToCook, wantToCook}) {
+function OurRecipes({recipes, handleWantToCook, wantToCook, currentlyCooking, handleCurrentlyCooking}) {
   return (
     <div>
       <div className="our-recipes flex flex-col gap-4 justify-center items-center text-center mt-20 mb-12">
@@ -18,7 +19,9 @@ function OurRecipes({recipes, handleWantToCook, wantToCook}) {
         </div>
 
         <div className="w-2/5 rounded-lg border-1 border-gray-200 py-8 h-fit">
-          <WantToCooks wantToCook={wantToCook}></WantToCooks>
+          <WantToCooks wantToCook={wantToCook} handleCurrentlyCooking={handleCurrentlyCooking}></WantToCooks>
+
+          <CurrentlyCookings currentlyCooking={currentlyCooking}></CurrentlyCookings>
         </div>
       </div>
     </div>
@@ -28,7 +31,9 @@ function OurRecipes({recipes, handleWantToCook, wantToCook}) {
 OurRecipes.PropTypes = {
   recipes: propTypes.array.isRequired,
   handleWantToCook: propTypes.func.isRequired,
-  wantToCook: propTypes.array.isRequired
+  wantToCook: propTypes.array.isRequired,
+  currentlyCooking: propTypes.array.isRequired,
+  handleCurrentlyCooking: propTypes.func.isRequired
 }
 
 export default OurRecipes

@@ -6,6 +6,7 @@ import OurRecipes from './components/recipes/OurRecipes';
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [wantToCook, setWantToCook] = useState([]);
+  const [currentlyCooking, setCurrentlyCooking] = useState([]); 
 
   useEffect(() => {
     fetch('recipes.json')
@@ -22,10 +23,18 @@ function App() {
     }
   }
 
+  const handleCurrentlyCooking = (recipe) => {
+    if (wantToCook.includes(recipe)) {
+      const newWantToCook = wantToCook.filter(r => r !== recipe);
+      setWantToCook(newWantToCook);
+    }
+    setCurrentlyCooking([...currentlyCooking, recipe]);
+  }
+
   return (
     <div className='px-36 pt-10 pb-24'>
       <Header></Header>
-      <OurRecipes recipes={recipes} handleWantToCook={handleWantToCook} wantToCook={wantToCook}></OurRecipes>
+      <OurRecipes recipes={recipes} handleWantToCook={handleWantToCook} wantToCook={wantToCook} currentlyCooking={currentlyCooking} handleCurrentlyCooking={handleCurrentlyCooking}></OurRecipes>
     </div>
   )
 }
