@@ -11,10 +11,9 @@ body {
     color: #150B2B;
     font-size: 20px;
     font-weight: 600;
-    padding: 20px 30px;
+    padding: 18px 30px;
     border-radius: 50px;
     background-color: #0BE58A;
-    border: 1px solid #150B2B;
     cursor: pointer;
 }
 

@@ -31,6 +31,10 @@ function Header() {
         <h1>Discover an exceptional cooking class tailored for you!</h1>
         <p>Learn and master the essentials of culinary artistry — from fundamental techniques and flavor-building to recipe structuring, plating, and kitchen management.</p>
         
+        <div>
+          <button className="button">Explore Now</button>
+          <button className="button">Our Feedback</button>
+        </div>
       </div>
     </div>
   )
