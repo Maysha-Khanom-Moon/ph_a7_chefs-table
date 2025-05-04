@@ -42,7 +42,8 @@ function Recipe({recipe, handleWantToCook}) {
 }
 
 Recipe.PropTypes = {
-    recipe: propTypes.object.isRequired
+    recipe: propTypes.object.isRequired,
+    handleWantToCook: propTypes.func.isRequired
 }
 
 export default Recipe

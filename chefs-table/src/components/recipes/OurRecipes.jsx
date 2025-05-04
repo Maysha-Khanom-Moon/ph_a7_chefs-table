@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import Recipe from "./Recipe";
-import WantToCook from "./WantToCook";
+import WantToCooks from "./want-to-cook/WantToCooks";
 
 function OurRecipes({recipes, handleWantToCook, wantToCook}) {
   return (
@@ -11,14 +11,14 @@ function OurRecipes({recipes, handleWantToCook, wantToCook}) {
       </div>
 
       <div className="our-recipes flex gap-6 justify-center items-start">
-        <div className="w-2/3 grid grid-cols-2 gap-6">
+        <div className="w-3/5 grid grid-cols-2 gap-6">
           {
             recipes.map(recipe => <Recipe key={recipe.recipe_id} recipe={recipe} handleWantToCook={handleWantToCook}></Recipe>)
           }
         </div>
 
-        <div className="w-1/3 rounded-lg border-1 border-gray-200 py-8 h-fit">
-          <WantToCook wantToCook={wantToCook}></WantToCook>
+        <div className="w-2/5 rounded-lg border-1 border-gray-200 py-8 h-fit">
+          <WantToCooks wantToCook={wantToCook}></WantToCooks>
         </div>
       </div>
     </div>
@@ -26,7 +26,9 @@ function OurRecipes({recipes, handleWantToCook, wantToCook}) {
 }
 
 OurRecipes.PropTypes = {
-  recipes: propTypes.array.isRequired
+  recipes: propTypes.array.isRequired,
+  handleWantToCook: propTypes.func.isRequired,
+  wantToCook: propTypes.array.isRequired
 }
 
 export default OurRecipes
