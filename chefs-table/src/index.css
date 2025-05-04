@@ -18,3 +18,14 @@ nav li {
     font-weight: 400;
 }
 
+.banner h1 {
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.banner p {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
