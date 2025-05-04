@@ -16,7 +16,7 @@ function CurrentlyCookings({currentlyCooking}) {
               <p className='w-1/4'>Calories</p>
             </div>
 
-            <div className='bg-gray-100 flex flex-col gap-6 mt-4 py-4 px-6'>
+            <div className='bg-gray-100 flex flex-col gap-6 my-4 py-4 px-6'>
               {
                 currentlyCooking.map((recipe, index) => (
                   <div className='flex items-center text-center' key={index}>
@@ -27,6 +27,12 @@ function CurrentlyCookings({currentlyCooking}) {
                   </div>
                 ))
               }
+            </div>
+
+            <div className='flex'>
+                <p className='w-1/2'></p>
+                <p className='w-1/4'>Total Time = <br />{currentlyCooking.reduce((total, recipe) => total + parseInt(recipe.preparing_time), 0)} minutes</p>
+                <p className='w-2/7'>Total Calories = <br />{currentlyCooking.reduce((total, recipe) => total + parseInt(recipe.calories), 0)} calories</p>
             </div>
           </div>
         </div>
