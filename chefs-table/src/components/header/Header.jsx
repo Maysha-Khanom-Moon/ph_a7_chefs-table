@@ -1,3 +1,6 @@
+import { IoSearchOutline } from "react-icons/io5";
+import { FaRegUserCircle } from "react-icons/fa";
+
 function Header() {
   return (
     <div>
@@ -14,7 +17,11 @@ function Header() {
 
             <div>
                 <div>
-                    <button></button>
+                    <button><IoSearchOutline /></button>
+                    <input type="text" placeholder="Search..." className="border-2 border-gray-300 rounded-md px-4 py-2" />
+                </div>
+                <div>
+                  <FaRegUserCircle />
                 </div>
             </div>
       </nav>
