@@ -10,7 +10,7 @@ function OurRecipes({recipes}) {
       </div>
 
       <div>
-        <div className="w-2/3 grid-cols-2 gap-6">
+        <div className="w-2/3 grid grid-cols-2 gap-6">
           {
             recipes.map(recipe => <Recipe key={recipe.recipe_id} recipe={recipe}></Recipe>)
           }
