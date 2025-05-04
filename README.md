@@ -1,4 +1,4 @@
-Live link: [Chefs table](chefs-table-ab.surge.sh)
+Live link: [Chefs table](https://chefs-table-ab.surge.sh/)
 
 <br>
 
